@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "btg-confirmations-tracker"
+version = "0.1.0"
+description = "A Python3 tool to track the real-time progress of a Bitcoin Gold (BTG) transaction towards a target number of confirmations."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    { name = "Fredrick A", email = "freddiedfre@users.noreply.github.com" }
+]
+dependencies = [
+    "requests>=2.25",
+    "Flask>=2.0",
+    "tqdm>=4.62.0",
+]
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 88
+ignore = E203, E266, E501, W503
+exclude = .git, __pycache__, old, build, dist
+
+[tool.coverage.run]
+branch = True
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = True
+fail_under = 80
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report=term-missing"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2",
+    "pytest-cov>=2.12",
+    "black>=21.9b0",
+    "flake8>=3.9",
+]
+
+[project.urls]
+Homepage = "https://freddiedfre.io/projects/btg-confirmations-tracker"
+Repository = "https://github.com/freddiedfre/btg-confirmations-tracker.git"

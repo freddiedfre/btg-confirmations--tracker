@@ -1,0 +1,69 @@
+<!-- src/templates/form-tailwind.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BTG Transaction Confirmation Tracker</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center h-screen">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
+                Track Your Transaction
+            </h2>
+            <form action="/tailwind" method="POST" class="space-y-4">
+                <div>
+                    <label
+                        for="txid"
+                        class="block text-gray-700 font-semibold mb-2"
+                        >Transaction ID:</label
+                    >
+                    <input
+                        type="text"
+                        id="txid"
+                        name="txid"
+                        required
+                        class="border border-gray-300 rounded-lg w-full py-2 px-3"
+                    />
+                </div>
+                <div>
+                    <label
+                        for="start_time"
+                        class="block text-gray-700 font-semibold mb-2"
+                        >Start Time (optional):</label
+                    >
+                    <input
+                        type="text"
+                        id="start_time"
+                        name="start_time"
+                        class="border border-gray-300 rounded-lg w-full py-2 px-3"
+                    />
+                </div>
+                <div>
+                    <label
+                        for="confirmation_target"
+                        class="block text-gray-700 font-semibold mb-2"
+                        >Confirmation Target:</label
+                    >
+                    <input
+                        type="number"
+                        id="confirmation_target"
+                        name="confirmation_target"
+                        value="300"
+                        class="border border-gray-300 rounded-lg w-full py-2 px-3"
+                    />
+                </div>
+                <button
+                    type="submit"
+                    class="w-full py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600"
+                >
+                    Track Progress
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

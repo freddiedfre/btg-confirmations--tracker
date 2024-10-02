@@ -1,0 +1,11 @@
+.vscode/
+*.log
+__pycache__/
+*.pyc
+*.pyo
+.env
+btg_insight_api/node_modules/
+btg_insight_api/logs/
+.tox/
+.coverage
+htmlcov/

@@ -1,0 +1,23 @@
+<!-- src/templates/form.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BTG Transaction Confirmation Tracker</title>
+    </head>
+    <body>
+        <form action="/" method="POST">
+            <label for="txid">Transaction ID:</label>
+            <input type="text" id="txid" name="txid" required />
+            <label for="start_time">Start Time (optional):</label>
+            <input type="text" id="start_time" name="start_time" />
+            <label for="confirmation_target">Confirmation Target:</label>
+            <input
+                type="number"
+                id="confirmation_target"
+                name="confirmation_target"
+                value="300"
+            />
+            <button type="submit">Track Progress</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+[submodule "btg_insight_api"]
+    url = git@github.com:BTCGPU/insight-api.git
